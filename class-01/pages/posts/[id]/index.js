@@ -6,11 +6,16 @@ export default function Post() {
 
   return (
     <div>
-      <h1>Id current post: {router.query.id}</h1>
+      Current post id: {router.query.id}
       <ul>
         <li>
           <Link href='/'>
-            <a>Back to home</a>
+            <a>Go to home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href={`${router.query.id}/comments`}>
+            <a>Go to comments</a>
           </Link>
         </li>
       </ul>
